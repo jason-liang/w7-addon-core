@@ -1,0 +1,47 @@
+{
+    "name": "colakiller/w7-addon-core",
+    "description": "for we7 app developer",
+    "keywords": ["we7", "addon", "framework", "core"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "colakiller",
+            "email": "lfz611@sina.com"
+        }
+    ],
+    "type": "library",
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.3|^8.0",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "ext-openssl": "*",
+        "illuminate/contracts": "^8.28",
+        "illuminate/container": "^8.28",
+        "illuminate/support": "^8.28",
+        "illuminate/log": "^8.28",
+        "illuminate/config": "^8.28",
+        "illuminate/cache": "^8.28",
+        "illuminate/view": "^8.28",
+        "illuminate/routing": "^8.28",
+        "illuminate/database": "^8.28",
+        "illuminate/validation": "^8.28",
+        "illuminate/encryption": "^8.28",
+        "illuminate/events": "^8.28",
+        "illuminate/queue": "^8.28",
+        "illuminate/console": "^8.28",
+        "fideloper/proxy": "^4.4",
+        "fruitcake/laravel-cors": "^2.0",
+        "opis/closure": "^3.6",
+        "vlucas/phpdotenv": "^5.2"
+    },
+    "autoload": {
+        "files": [
+          "src/Foundation/helpers.php",
+          "src/Foundation/we7Helpers.php"
+        ],
+        "psr-4": {
+          "W7AddonCore\\": "src/"
+        }
+    }
+}
