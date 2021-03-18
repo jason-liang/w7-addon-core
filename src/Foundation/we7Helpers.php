@@ -35,15 +35,6 @@ if (! function_exists('we7_data_path')) {
   }
 }
 
-if (! function_exists('fix_mix_path')) {
-  function fix_mix_path($path)
-  {
-    $relativePath = get_relative_path(we7_path(), public_path());
-
-    return '/'.$relativePath.$path;
-  }
-}
-
 if (! function_exists('get_relative_path')) {
   function get_relative_path($parentPath, $sonPath)
   {
