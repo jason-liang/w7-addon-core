@@ -78,6 +78,8 @@ use Illuminate\Routing\Console\MiddlewareMakeCommand;
 use Illuminate\Session\Console\SessionTableCommand;
 use Illuminate\Support\ServiceProvider;
 
+use W7AddonCore\Foundation\Console\BuildCommand;
+
 class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvider
 {
     /**
@@ -126,7 +128,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
         'StorageLink' => 'command.storage.link',
         'Up' => 'command.up',
         'ViewCache' => 'command.view.cache',
-        'ViewClear' => 'command.view.clear',
+        'ViewClear' => 'command.view.clear'
     ];
 
     /**
@@ -167,6 +169,7 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
         'StubPublish' => 'command.stub.publish',
         // 'TestMake' => 'command.test.make',
         'VendorPublish' => 'command.vendor.publish',
+        'Build' => 'command.build'
     ];
 
     /**
@@ -194,6 +197,12 @@ class ArtisanServiceProvider extends ServiceProvider implements DeferrableProvid
         }
 
         $this->commands(array_values($commands));
+    }
+
+    protected function registerBuildCommand() {
+        $this->app->singleton('command.build', function ($app) {
+            return new BuildCommand;
+        });
     }
 
     /**
