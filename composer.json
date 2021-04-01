@@ -22,5 +22,12 @@
         "psr-4": {
           "W7AddonCore\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "W7AddonCore\\CoreServiceProvider"
+            ]
+        }
     }
 }
