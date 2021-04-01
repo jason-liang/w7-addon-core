@@ -47,28 +47,56 @@ class BuildCommand extends Command
         'changes',
         '.editorconfig',
         '.env',
+        '.env.example',
         '.DS_Store',
+        'phpunit.xml',
         '/dist',
         '/core/database',
+        '/core/config',
+        '/core/routes',
+        '/core/storage',
+        '/core/tests',
         '/core/resources/admin',
         '/core/app/Console',
         '/core/routes/console.php',
         '/core/repositories',
         '/core/vendor/symfony/console',
         '/core/vendor/egulias/email-validator',
-        '/core/vendor/swiftmailer/swiftmailer',
-        '/core/vendor/fruitcake/laravel-cors',
-        '/core/vendor/laravel/framework/src/Illuminate/contracts/Auth',
-        '/core/vendor/laravel/framework/src/Illuminate/auth',
-        '/core/vendor/laravel/framework/src/Illuminate/contracts/Mail',
-        '/core/vendor/laravel/framework/src/Illuminate/Testing',
-        '/core/vendor/laravel/framework/src/Illuminate/Redis',
-        '/core/vendor/laravel/framework/src/Illuminate/Mail',
-        '/core/vendor/laravel/framework/src/Illuminate/Auth',
         '/core/vendor/colakiller/w7-addon-core/src/Publishes',
-        '/core/vendor/laravel/framework/src/Illuminate/contracts/Consle',
-        '/core/vendor/laravel/framework/src/Illuminate/Console',
+        // '/core/vendor/swiftmailer/swiftmailer',
+        // '/core/vendor/fruitcake/laravel-cors',
+        /* 
+            iiluminate contracts 
+        */
+        '/core/vendor/laravel/framework/src/Illuminate/Contracts/Auth',
+        '/core/vendor/laravel/framework/src/Illuminate/Contracts/Consle',
+        '/core/vendor/laravel/framework/src/Illuminate/Contracts/Mail',
+        '/core/vendor/laravel/framework/src/Illuminate/Contracts/Redis',
+        /* 
+            illuminate foundation
+        */
+        '/core/vendor/laravel/framework/src/Illuminate/Foundation/Auth',
+        '/core/vendor/laravel/framework/src/Illuminate/Foundation/Console',
+        '/core/vendor/laravel/framework/src/Illuminate/Foundation/Testing',
+        /* 
+            illuminate support
+        */
         '/core/vendor/laravel/framework/src/Illuminate/Support/Testing',
+        /* 
+            illuminate package
+        */
+        '/core/vendor/laravel/framework/src/Illuminate/Auth',
+        '/core/vendor/laravel/framework/src/Illuminate/Mail',
+        [
+            'dir' => '/core/vendor/laravel/framework/src/Illuminate/Testing',
+            'excepts' => [
+                'ParallelTestingServiceProvider.php',
+                'Concerns'
+            ]
+        ],
+        '/core/vendor/laravel/framework/src/Illuminate/Console',
+        '/core/vendor/laravel/framework/src/Illuminate/Notification',
+        '/core/vendor/laravel/framework/src/Illuminate/Redis',
         '/core/vendor/laravel/framework/src/Illuminate/database/PostgresConnection.php',
         '/core/vendor/laravel/framework/src/Illuminate/database/SQLiteConnection.php',
         '/core/vendor/laravel/framework/src/Illuminate/database/SqlServerConnection.php',
