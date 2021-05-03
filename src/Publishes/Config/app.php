@@ -123,6 +123,7 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+    'mix_url' => env('MIX_BASE_URL', null),
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers

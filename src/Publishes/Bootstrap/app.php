@@ -28,9 +28,11 @@ if (! is_dir(we7_data_path(module_name()))) {
                     'cache' => [
                         'data' => []
                     ],
-                    'views' => []
+                    'views' => [],
+                    'sessions' => []
                 ],
-                'logs' => []
+                'logs' => [],
+                
             ]
         ]
     ]);
