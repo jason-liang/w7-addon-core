@@ -60,6 +60,7 @@ class BuildCommand extends Command
         '/core/app/Console',
         '/core/routes/console.php',
         '/core/repositories',
+        '/core/node_modules',
         '/core/vendor/symfony/console',
         '/core/vendor/egulias/email-validator',
         '/core/vendor/colakiller/w7-addon-core/src/Publishes',
